@@ -113,32 +113,132 @@ A+
 */
 
 
-/**********************************************************
- * LOOPS
- **********************************************************/
+-------------------------------------------
+4. ARRAY
+-------------------------------------------
+*/
+$doctors = ["Cardiologist", "Neurologist", "Dermatologist"];
 
-// FOR LOOP
-for ($i = 1; $i <= 3; $i++) {
-    echo $i;
-}
+echo "Doctor List:<br>";
+print_r($doctors);
+echo "<br><br>";
+
 /*
-OUTPUT:
-123
+Expected Output:
+Array ( [0] => Cardiologist [1] => Neurologist [2] => Dermatologist )
 */
 
 
-// WHILE LOOP
-$j = 1;
-while ($j <= 3) {
-    echo $j;
+/*
+-------------------------------------------
+5. FOREACH LOOP (MOST IMPORTANT)
+-------------------------------------------
+*/
+echo "Doctors using foreach loop:<br>";
+
+foreach ($doctors as $doctor) {
+    echo $doctor . "<br>";
+}
+echo "<br>";
+
+/*
+Expected Output:
+Cardiologist
+Neurologist
+Dermatologist
+*/
+
+
+/*
+-------------------------------------------
+6. ASSOCIATIVE ARRAY + FOREACH
+-------------------------------------------
+*/
+$patient = [
+    "name" => "Rakib",
+    "age" => 25,
+    "blood_group" => "B+"
+];
+
+echo "Patient Details:<br>";
+
+foreach ($patient as $key => $value) {
+    echo "$key : $value <br>";
+}
+echo "<br>";
+
+/*
+Expected Output:
+name : Rakib
+age : 25
+blood_group : B+
+*/
+
+
+/*
+-------------------------------------------
+7. WHILE LOOP
+-------------------------------------------
+*/
+echo "While Loop Output:<br>";
+
+$i = 1;
+while ($i <= 3) {
+    echo $i . "<br>";
+    $i++;
+}
+echo "<br>";
+
+/*
+Expected Output:
+1
+2
+3
+*/
+
+
+/*
+-------------------------------------------
+8. DO-WHILE LOOP
+-------------------------------------------
+*/
+echo "Do-While Loop Output:<br>";
+
+$j = 5;
+do {
+    echo $j . "<br>";
     $j++;
-}
+} while ($j <= 3);
+
+echo "<br>";
+
 /*
-OUTPUT:
-123
+Expected Output:
+5
+(Code runs at least once)
 */
 
 
+/*
+-------------------------------------------
+9. FOR LOOP
+-------------------------------------------
+*/
+echo "For Loop Output:<br>";
+
+for ($k = 1; $k <= 5; $k++) {
+    echo $k . " ";
+}
+
+echo "<br><br>";
+
+/*
+Expected Output:
+1 2 3 4 5
+*/
+
+
+/*
 /**********************************************************
  * FUNCTIONS
  **********************************************************/
